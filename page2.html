@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendship Video 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .box {
+      width: 90%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+    }
+
+    #msg {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>💛 Special Video For You 💖</h1>
+
+    <video id="friendVideo" controls autoplay>
+      <source src="VID-20260507-WA0008.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+
+    <div id="msg"></div>
+  </div>
+
+  <script>
+    let video = document.getElementById("friendVideo");
+    let msg = document.getElementById("msg");
+
+    video.onended = function () {
+      msg.innerHTML = "💍 One more surprise is waiting for you... 💖";
+
+      setTimeout(() => {
+        window.location.href = "weddingwish.html";
+      }, 2000);
+    };
+  </script>
+
+</body>
+</html>
